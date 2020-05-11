@@ -1,0 +1,34 @@
+p {
+  margin-top: 65px;
+}
+table, th, tr, td {
+  border: 1px solid black;
+}
+th, tr, td {
+  width: 10px;
+  text-align: center;
+}
+#globalTable th, tr, td {
+  width: 200px;
+}
+th[name="pokemon"] {
+  background-color: red;
+}
+th[name="include"] {
+  background-color: green;
+}
+th[name="form"] {
+  background-color: blue;
+}
+th[name="gender"] {
+  background-color: pink;
+}
+th[name="shiny"] {
+  background-color: yellow;
+}
+th[name="cp"] {
+  background-color: purple;
+}
+#generateButton {
+  margin-top: 50px;
+}

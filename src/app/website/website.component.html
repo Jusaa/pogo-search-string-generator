@@ -1,0 +1,93 @@
+<p></p>
+<table id="globalTable">
+  <tr>
+    <th>Show purified Pokemon</th>
+    <th><input type="checkbox" id="purified" name="purified" value="1" checked="true"></th>
+  </tr>
+  <tr>
+    <th>Show shadow Pokemon</th>
+    <th><input type="checkbox" id="shadow" name="shadow" value="1" checked="true"></th>
+  </tr>
+  <tr>
+    <th>Show traded Pokemon</th>
+    <th><input type="checkbox" id="traded" name="traded" value="1" checked="true"></th>
+  </tr>
+</table>
+
+<table id="mainTable">
+  <tr>
+    <th name="pokemon">Pokemon</th>
+    <th name="include">Include all moves</th>
+    <th name="include">Include only legacy</th>
+    <th name="include">Exclude all</th>
+    <th name="form">Original form only</th>
+    <th name="form">Alola form only</th>
+    <th name="gender">Male only</th>
+    <th name="gender">Female only</th>
+    <th name="shiny">Shiny only</th>
+    <th name="shiny">Non-shiny only</th>
+    <th name="cp">Lvl1 only</th>
+    <th name="cp">Great League only</th>
+    <th name="cp">Ultra League only</th>
+  </tr>
+  <tr>
+    <td><label for="1">Bulbasaur</label></td>
+    <td><input type="radio" id="include_all1" name="include1" value="1"></td>
+    <td><input type="radio" id="include_special1" name="include1" value="1"></td>
+    <td><input type="radio" id="exclude1" name="include1" value="1" checked="true"></td>
+    <td><input type="radio" id="original1" name="form1" value="1"></td>
+    <td><input type="radio" id="alola1" name="form1" value="1"></td>
+    <td><input type="radio" id="gender_male1" name="gender1" value="1"></td>
+    <td><input type="radio" id="gender_female1" name="gender1" value="1"></td>
+    <td><input type="radio" id="shiny1" name="shiny1" value="1"></td>
+    <td><input type="radio" id="not_shining1" name="shiny1" value="1"></td>
+    <td><input type="radio" id="lvl1_1" name="cp1" value="1"></td>
+    <td><input type="radio" id="great1" name="cp1" value="1"></td>
+    <td><input type="radio" id="ultra1" name="cp1" value="1"></td>
+  </tr>
+  <tr>
+    <td><label for="1">Ivysaur</label></td>
+    <td><input type="radio" id="include_all2" name="include2" value="2"></td>
+    <td><input type="radio" id="include_special2" name="include2" value="2"></td>
+    <td><input type="radio" id="exclude2" name="include2" value="2" checked="true"></td>
+    <td><input type="radio" id="original2" name="form2" value="2"></td>
+    <td><input type="radio" id="alola2" name="form2" value="2"></td>
+    <td><input type="radio" id="gender_male2" name="gender2" value="2"></td>
+    <td><input type="radio" id="gender_female2" name="gender2" value="2"></td>
+    <td><input type="radio" id="shiny2" name="shiny2" value="2"></td>
+    <td><input type="radio" id="not_shining2" name="shiny2" value="2"></td>
+    <td><input type="radio" id="lvl1_2" name="cp2" value="2"></td>
+    <td><input type="radio" id="great2" name="cp2" value="2"></td>
+    <td><input type="radio" id="ultra2" name="cp2" value="2"></td>
+  </tr>
+  <tr>
+    <td><label for="1">Venusaur</label></td>
+    <td><input type="radio" id="include_all3" name="include3" value="3"></td>
+    <td><input type="radio" id="include_special3" name="include3" value="3"></td>
+    <td><input type="radio" id="exclude3" name="include3" value="3" checked="true"></td>
+    <td><input type="radio" id="original3" name="form3" value="3"></td>
+    <td><input type="radio" id="alola3" name="form3" value="3"></td>
+    <td><input type="radio" id="gender_male3" name="gender3" value="3"></td>
+    <td><input type="radio" id="gender_female3" name="gender3" value="3"></td>
+    <td><input type="radio" id="shiny3" name="shiny3" value="3"></td>
+    <td><input type="radio" id="not_shining3" name="shiny3" value="3"></td>
+    <td><input type="radio" id="lvl1_3" name="cp3" value="3"></td>
+    <td><input type="radio" id="great3" name="cp3" value="3"></td>
+    <td><input type="radio" id="ultra3" name="cp3" value="3"></td>
+  </tr>
+</table>
+
+<div id="generateButton">
+  <button (click)="generateString()">Generate</button>
+</div>
+
+<textarea id="search_string_area" rows="10" cols="50" readonly="true">
+</textarea>
+
+<div>
+  <form method="post" action="/api/addPokemon">
+    <input type="number" name="id" min="1" step="1" max="1000">
+    <input type="text" name="name">
+    <input type="submit" value="Add Pokemon">
+  </form>
+</div>
